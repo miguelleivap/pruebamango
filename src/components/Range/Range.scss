@@ -1,0 +1,81 @@
+.range {
+  display: flex;
+  align-items: center;
+  width: 80%;
+}
+
+.line-container {
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  width: 15%;
+  margin: 0 15px;
+}
+
+.line, .bullet {
+  background-color: black;
+}
+
+.line {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  height: 4px;
+}
+
+.bullet {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.input-container {
+  color: black;
+  display: inline-flex;
+  align-items: center;
+}
+
+input[type="number"] {
+  border: none;
+  outline: none;
+  width: 50px; 
+  text-align: right; 
+}
+
+.input-symbol {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  color: #000;
+}
+
+input[type="number"]:focus {
+  border: 1px solid #000; 
+}
+
+@media (max-width: 768px) {
+  .range {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .line-container {
+    width: 30%;
+  }
+}
+
+@media (max-width: 480px) {
+  .range {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .line-container {
+    width: 30%;
+  }
+}
